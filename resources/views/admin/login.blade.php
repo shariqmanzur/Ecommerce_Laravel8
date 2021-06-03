@@ -50,6 +50,7 @@
                                 </div>
                                 <button class="au-btn au-btn--block au-btn--green m-b-20" type="submit">sign in</button>
                                 <p class="text-danger text-center">{{ session('error') }}</p>
+                                <p class="text-danger text-center">{{ session('msg') }}</p>
                             </form>
                         </div>
                     </div>
