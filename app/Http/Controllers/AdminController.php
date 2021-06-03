@@ -8,14 +8,14 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
+    public function index(Request $request)
     {
-        return View('admin.login');
+        if($request->session()->has('ADMIN_LOGIN')){
+            return redirect('admin/dashboard');
+        }
+        else{
+            return View('admin.login');
+        }
     }
 
     public function auth(Request $request)
@@ -51,7 +51,4 @@ class AdminController extends Controller
     public function dashboard(){
         return view('admin.dashboard');
     }
-
-
-
 }
