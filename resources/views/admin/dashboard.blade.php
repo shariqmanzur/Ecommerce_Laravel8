@@ -1,5 +1,6 @@
 @extends('layouts/backend')
-
+@section('page_title', 'Dashboard')
+@section('dashboard_select', 'active')
 @section('content')
 
             <!-- MAIN CONTENT-->

@@ -1,5 +1,6 @@
 @extends('layouts/backend')
-
+@section('page_title', 'Category')
+@section('category_select', 'active')
 @section('content')
 
 <!-- MAIN CONTENT-->
@@ -20,7 +21,7 @@
                                 @endif
                                 <div class="top-campaign">
                                     <h3 class="title-3 m-b-30">top categories</h3>
-                                    <a href="category/manage_category">
+                                    <a href="{{ url('admin/category/manage_category') }}" >
                                         <button type="button" class="btn btn-outline-success">Add category</button>
                                     </a>
                                     <hr/>
@@ -41,9 +42,6 @@
                                                     <td>{{ $list->category_name }}</td>
                                                     <td>{{ $list->category_slug }}</td>
                                                     <td class="text-left">
-                                                        <a href="{{ url('admin/category/manage_category/')}}/{{ $list->id }}">
-                                                        <button type="button" class="btn btn-outline-info btn-sm">Update</button>
-                                                        </a>
                                                         @if($list->status==1)
                                                         <a href="{{ url('admin/category/status/0')}}/{{ $list->id }}">
                                                             <button type="button" class="btn btn-outline-warning btn-sm">Enable</button>
@@ -53,8 +51,11 @@
                                                             <button type="button" class="btn btn-outline-secondary btn-sm">Disable</button>
                                                         </a>
                                                         @endif
+                                                        <a href="{{ url('admin/category/manage_category/')}}/{{ $list->id }}">
+                                                            <button type="button" class="btn btn-outline-info btn-sm">Update</button>
+                                                        </a>
                                                         <a href="{{ url('admin/category/delete/')}}/{{ $list->id }}">
-                                                        <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
+                                                            <button type="button" class="btn btn-outline-danger btn-sm">Delete</button>
                                                         </a>
                                                     </td>
                                                 </tr>

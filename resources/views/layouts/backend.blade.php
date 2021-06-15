@@ -10,7 +10,7 @@
     <meta name="keywords" content="au theme template">
 
     <!-- Title Page-->
-    <title>Login</title>
+    <title>@yield('page_title')</title>
 
     <!-- Fontfaces CSS-->
     <link href="{{ asset('admin_assets/css/font-face.css') }}" rel="stylesheet" media="all">
@@ -33,7 +33,7 @@
             <div class="header-mobile__bar">
                 <div class="container-fluid">
                     <div class="header-mobile-inner">
-                        <a href="#" class="logo">
+                        <a href="{{ url('admin/dashboard') }}" class="logo">
                             <img src="{{ Config::get('constants.SITE_LOGO') }}" alt="Logo">
                         </a>
                         <button class="hamburger hamburger--slider" type="button">
@@ -47,14 +47,15 @@
             <nav class="navbar-mobile">
                 <div class="container-fluid">
                     <ul class="navbar-mobile__list list-unstyled">
-                        <li class="has-sub">
-                            <a class="js-arrow" href="dashboard">
+                        <li class="@yield('dashboard_select')">
+                            <a href="{{ url('admin/dashboard') }}">
                                 <i class="fas fa-tachometer-alt"></i>Dashboard</a>
-                            
+                            </a>
                         </li>
-                        <li>
-                            <a href="category">
-                                <i class="fas fa-chart-bar"></i>Categories</a>
+                        <li class="@yield('category_select')">
+                            <a href="{{ url('admin/category') }}">
+                                <i class="fas fa-list"></i>Categories
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -65,21 +66,21 @@
         <!-- MENU SIDEBAR-->
         <aside class="menu-sidebar d-none d-lg-block">
             <div class="logo">
-                <a href="#">
+                <a href="{{ url('admin/dashboard') }}">
                     <img src="{{ Config::get('constants.SITE_LOGO') }}" alt="Logo">
                 </a>
             </div>
             <div class="menu-sidebar__content js-scrollbar1">
                 <nav class="navbar-sidebar">
                     <ul class="list-unstyled navbar__list">
-                        <li class="active has-sub">
-                            <a href="dashboard">
-                                <i class="fas fa-chart-bar"></i>Dashboard
+                        <li class="@yield('dashboard_select')">
+                            <a href="{{ url('admin/dashboard') }}">
+                                <i class="fas fa-tachometer-alt"></i>Dashboard</a>
                             </a>
                         </li>
-                        <li>
-                            <a href="category">
-                                <i class="fas fa-chart-bar"></i>Categories
+                        <li class="@yield('category_select')">
+                            <a href="{{ url('admin/category') }}">
+                                <i class="fas fa-list"></i>Categories
                             </a>
                         </li>
                     </ul>
@@ -112,7 +113,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="logout">
+                                                <a href="{{ url('admin/logout') }}">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>

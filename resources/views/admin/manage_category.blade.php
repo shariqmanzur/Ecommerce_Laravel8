@@ -1,5 +1,6 @@
 @extends('layouts/backend')
-
+@section('page_title', 'Category')
+@section('category_select', 'active')
 @section('content')
 
  <!-- MAIN CONTENT-->
@@ -43,9 +44,9 @@
                                                 </div>
                                                 <div>
                                                 @if($id>0)
-                                                    <button type="submit" class="btn btn-outline-success">Update category</button>
+                                                    <button type="submit" class="btn btn-outline-success">Update</button>
                                                 @else
-                                                    <button type="submit" class="btn btn-outline-success">Add category</button>
+                                                    <button type="submit" class="btn btn-outline-success">Add</button>
                                                 @endif
                                                 <a href="{{ url('admin/category') }}">
                                                     <button type="button" class="btn btn-outline-secondary">Back</button>

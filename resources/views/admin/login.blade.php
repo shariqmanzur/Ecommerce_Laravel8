@@ -33,7 +33,7 @@
                 <div class="login-wrap">
                     <div class="login-content">
                         <div class="login-logo">
-                            <a href="#">
+                            <a href="{{ url('admin') }}">
                                 <img src="{{ Config::get('constants.SITE_LOGO') }}" alt="Logo">
                             </a>
                         </div>
