@@ -57,6 +57,11 @@
                                 <i class="fas fa-list"></i>Categories
                             </a>
                         </li>
+                        <li class="@yield('counpon_select')">
+                            <a href="{{ url('admin/coupon') }}">
+                                <i class="fas fa-tags"></i>Counpons
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -81,6 +86,11 @@
                         <li class="@yield('category_select')">
                             <a href="{{ url('admin/category') }}">
                                 <i class="fas fa-list"></i>Categories
+                            </a>
+                        </li>
+                        <li class="@yield('counpon_select')">
+                            <a href="{{ url('admin/coupon') }}">
+                                <i class="fas fa-tags"></i>Counpons
                             </a>
                         </li>
                     </ul>
