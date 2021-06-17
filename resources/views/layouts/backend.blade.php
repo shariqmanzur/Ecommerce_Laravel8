@@ -67,6 +67,11 @@
                                 <i class="fas fa-arrows-alt"></i>Sizes
                             </a>
                         </li>
+                        <li class="@yield('color_select')">
+                            <a href="{{ url('admin/color') }}">
+                                <i class="fas fa-paint-brush"></i>Colors
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -101,6 +106,11 @@
                         <li class="@yield('size_select')">
                             <a href="{{ url('admin/size') }}">
                                 <i class="fas fa-arrows-alt"></i>Sizes
+                            </a>
+                        </li>
+                        <li class="@yield('color_select')">
+                            <a href="{{ url('admin/color') }}">
+                                <i class="fas fa-paint-brush"></i>Colors
                             </a>
                         </li>
                     </ul>
