@@ -59,7 +59,12 @@
                         </li>
                         <li class="@yield('counpon_select')">
                             <a href="{{ url('admin/coupon') }}">
-                                <i class="fas fa-tags"></i>Counpons
+                                <i class="fas fa-tags"></i>Coupons
+                            </a>
+                        </li>
+                        <li class="@yield('size_select')">
+                            <a href="{{ url('admin/size') }}">
+                                <i class="fas fa-arrows-alt"></i>Sizes
                             </a>
                         </li>
                     </ul>
@@ -90,7 +95,12 @@
                         </li>
                         <li class="@yield('counpon_select')">
                             <a href="{{ url('admin/coupon') }}">
-                                <i class="fas fa-tags"></i>Counpons
+                                <i class="fas fa-tags"></i>Coupons
+                            </a>
+                        </li>
+                        <li class="@yield('size_select')">
+                            <a href="{{ url('admin/size') }}">
+                                <i class="fas fa-arrows-alt"></i>Sizes
                             </a>
                         </li>
                     </ul>
