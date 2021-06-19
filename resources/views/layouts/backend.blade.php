@@ -57,6 +57,11 @@
                                 <i class="fas fa-list"></i>Categories
                             </a>
                         </li>
+                        <li class="@yield('brand_select')">
+                            <a href="{{ url('admin/brand') }}">
+                                <i class="fas fa-shopping-bag"></i>Brands
+                            </a>
+                        </li>
                         <li class="@yield('counpon_select')">
                             <a href="{{ url('admin/coupon') }}">
                                 <i class="fas fa-tags"></i>Coupons
@@ -64,7 +69,7 @@
                         </li>
                         <li class="@yield('size_select')">
                             <a href="{{ url('admin/size') }}">
-                                <i class="fas fa-arrows-alt"></i>Sizes
+                                <i class="fas fa-crop"></i>Sizes
                             </a>
                         </li>
                         <li class="@yield('color_select')">
@@ -98,6 +103,11 @@
                                 <i class="fas fa-list"></i>Categories
                             </a>
                         </li>
+                        <li class="@yield('brand_select')">
+                            <a href="{{ url('admin/brand') }}">
+                                <i class="fas fa-shopping-bag"></i>Brands
+                            </a>
+                        </li>
                         <li class="@yield('counpon_select')">
                             <a href="{{ url('admin/coupon') }}">
                                 <i class="fas fa-tags"></i>Coupons
@@ -105,7 +115,7 @@
                         </li>
                         <li class="@yield('size_select')">
                             <a href="{{ url('admin/size') }}">
-                                <i class="fas fa-arrows-alt"></i>Sizes
+                                <i class="fas fa-crop"></i>Sizes
                             </a>
                         </li>
                         <li class="@yield('color_select')">
