@@ -77,6 +77,11 @@
                                 <i class="fas fa-paint-brush"></i>Colors
                             </a>
                         </li>
+                        <li class="@yield('product_select')">
+                            <a href="{{ url('admin/product') }}">
+                                <i class="fas fa-laptop"></i>Products
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -121,6 +126,11 @@
                         <li class="@yield('color_select')">
                             <a href="{{ url('admin/color') }}">
                                 <i class="fas fa-paint-brush"></i>Colors
+                            </a>
+                        </li>
+                        <li class="@yield('product_select')">
+                            <a href="{{ url('admin/product') }}">
+                                <i class="fas fa-laptop"></i>Products
                             </a>
                         </li>
                     </ul>
